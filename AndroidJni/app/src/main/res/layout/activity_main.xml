@@ -16,12 +16,18 @@
         android:id="@+id/get_string_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="弹出一个字符串"/>
+        android:text="从JNI返回一个字符串"/>
 
     <Button
-        android:id="@+id/change_text_btn"
+        android:id="@+id/get_string_info_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="改变文字"/>
+        android:text="JNI中处理获取传入的字符串"/>
+
+    <Button
+        android:id="@+id/call_java_method_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="native调用java方法"/>
 
 </LinearLayout>
