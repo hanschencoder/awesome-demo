@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nativeInterface = new NativeInterface();
 
         findViewById(R.id.get_string_btn).setOnClickListener(MainActivity.this);
-
+        findViewById(R.id.change_text_btn).setOnClickListener(MainActivity.this);
     }
 
     @Override
@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.get_string_btn:
                 Toast.makeText(context, nativeInterface.getStringFromNativeWorld(), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.change_text_btn:
+                Toast.makeText(context, nativeInterface.changeText("Hello, I am Java String"), Toast.LENGTH_SHORT).show();
                 break;
         }
     }

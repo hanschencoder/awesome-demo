@@ -11,4 +11,6 @@ public class NativeInterface extends BaseClass implements TestInterface {
     }
 
     public native String getStringFromNativeWorld();
+
+    public native String changeText(String input);
 }
