@@ -1,7 +1,5 @@
 package com.hanschen.androidjni.bean;
 
-import android.util.Log;
-
 /**
  * @author Hans.Chen
  */

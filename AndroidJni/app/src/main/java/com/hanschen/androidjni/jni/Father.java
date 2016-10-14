@@ -4,13 +4,13 @@ package com.hanschen.androidjni.jni;
  * Created by chenhang on 2016/10/13.
  */
 
-public class BaseClass {
+public class Father {
 
-    public BaseClass() {
+    public Father() {
     }
 
     @Override
     public String toString() {
-        return "BaseClass{}";
+        return "Father{}";
     }
 }

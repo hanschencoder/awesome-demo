@@ -13,6 +13,12 @@
     tools:context="com.hanschen.androidjni.MainActivity">
 
     <Button
+        android:id="@+id/get_jni_version_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取JNI版本"/>
+
+    <Button
         android:id="@+id/get_string_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,5 +35,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="native调用java方法"/>
+
+    <Button
+        android:id="@+id/call_super_class_method_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="native调用java父类方法"/>
+
+    <Button
+        android:id="@+id/get_super_class_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取父类"/>
+
+    <Button
+        android:id="@+id/new_user_info_from_native_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="在native层创建UserInfo对象"/>
+
+    <Button
+        android:id="@+id/change_field_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="在native层修改对象属性"/>
+
+    <Button
+        android:id="@+id/reverse_array_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="在native层反转数组"/>
+
+    <Button
+        android:id="@+id/create_new_thread_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="在native层创建新的线程"/>
 
 </LinearLayout>
