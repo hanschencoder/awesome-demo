@@ -1,0 +1,44 @@
+syntax = "proto2";
+package ut.android.ressync.protobuf;
+
+option java_package = "ut.android.ressync.protobuf";
+option java_outer_classname = "ProtoBean";
+
+option optimize_for = SPEED; //[SPEED|CODE_SIZE|LITE_RUNTIME]
+
+enum MessageType  {
+
+	//PC-->手机端消息
+	FILE_SYNC                             = 0;//PC发送文件到手机
+
+	//手机-->PC消息
+	REPORT_MOBILE_INFO                    = 1000;//发送手机基本信息到PC
+	REPORT_SUCCEED                        = 1001;//发送反馈到PC
+
+	//心跳
+	KEEP_ALIVE                            = 3000;//暂时没用
+	KEEP_ALIVE_ACK                        = 3001;
+}
+
+message Packet {
+	required MessageType messageType = 1;
+
+	optional FileInfo fileInfo = 2;
+	optional MobileInfo mobileInfo = 3;
+	optional string filePath = 4;
+}
+
+message FileInfo {
+	required bytes data = 1;
+	required string operation = 2;
+	required string savePath = 3;
+}
+
+message MobileInfo {
+	required string mode = 1;
+	required string device = 2;
+	required string product = 3;
+	required string manufacturer = 4;
+	required string release = 5;
+	required int32 sdk = 6;
+}
