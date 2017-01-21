@@ -13,8 +13,8 @@ public class ProxySubject implements Subject {
 
     @Override
     public void request() {
-        System.out.print("Log: before");
+        System.out.println("Log: before");
         mSubject.request();
-        System.out.print("Log: after");
+        System.out.println("Log: after");
     }
 }
