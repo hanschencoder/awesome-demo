@@ -1,0 +1,5 @@
+.gradle
+/.idea/*
+!/.idea/encodings.xml
+build/
+/proguard/out
